@@ -16,6 +16,8 @@ const creators = require('./routes/creators');
 const developers = require('./routes/developers');
 const history = require('./routes/history');
 const movies = require('./routes/movies');
+const news = require('./routes/news');
+const press = require('./routes/press');
 
 // error handler
 onerror(app);
@@ -52,6 +54,8 @@ app.use(creators.routes(), creators.allowedMethods());
 app.use(developers.routes(), developers.allowedMethods());
 app.use(history.routes(), history.allowedMethods());
 app.use(movies.routes(), movies.allowedMethods());
+app.use(news.routes(), news.allowedMethods());
+app.use(press.routes(), press.allowedMethods());
 
 app.use(async (ctx) => {
   ctx.status = 404
