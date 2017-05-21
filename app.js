@@ -22,6 +22,7 @@ const privacy = require('./routes/privacy');
 const terms = require('./routes/terms');
 const sports = require('./routes/sports');
 const trys = require('./routes/try');
+const single = require('./routes/single');
 
 // error handler
 onerror(app);
@@ -64,10 +65,11 @@ app.use(privacy.routes(), privacy.allowedMethods());
 app.use(terms.routes(), terms.allowedMethods());
 app.use(sports.routes(), sports.allowedMethods());
 app.use(trys.routes(), trys.allowedMethods());
+app.use(single.routes(), single.allowedMethods());
 
 app.use(async (ctx) => {
   ctx.status = 404
-  await ctx.render('base/404')
-})
+  await ctx.render('base/404');
+});
 
 module.exports = app;
