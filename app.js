@@ -11,6 +11,9 @@ const index = require('./routes/index');
 const about = require('./routes/about');
 const upload = require('./routes/upload');
 const shows = require('./routes/shows');
+const copyright = require('./routes/copyright');
+const creators = require('./routes/creators');
+const developers = require('./routes/developers');
 
 // error handler
 onerror(app);
@@ -42,5 +45,8 @@ app.use(index.routes(), index.allowedMethods());
 app.use(about.routes(), about.allowedMethods());
 app.use(upload.routes(), upload.allowedMethods());
 app.use(shows.routes(), shows.allowedMethods());
+app.use(copyright.routes(), copyright.allowedMethods());
+app.use(creators.routes(), creators.allowedMethods());
+app.use(developers.routes(), developers.allowedMethods());
 
 module.exports = app;
