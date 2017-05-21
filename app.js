@@ -18,6 +18,10 @@ const history = require('./routes/history');
 const movies = require('./routes/movies');
 const news = require('./routes/news');
 const press = require('./routes/press');
+const privacy = require('./routes/privacy');
+const terms = require('./routes/terms');
+const sports = require('./routes/sports');
+const trys = require('./routes/try');
 
 // error handler
 onerror(app);
@@ -56,6 +60,10 @@ app.use(history.routes(), history.allowedMethods());
 app.use(movies.routes(), movies.allowedMethods());
 app.use(news.routes(), news.allowedMethods());
 app.use(press.routes(), press.allowedMethods());
+app.use(privacy.routes(), privacy.allowedMethods());
+app.use(terms.routes(), terms.allowedMethods());
+app.use(sports.routes(), sports.allowedMethods());
+app.use(trys.routes(), trys.allowedMethods());
 
 app.use(async (ctx) => {
   ctx.status = 404

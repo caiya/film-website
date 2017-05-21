@@ -969,7 +969,7 @@ select.form-control.bfh-countries:hover {
 	margin:1em 0 0 0;
 }
 .history-left {
-    width: 90px !important;
+    /*width: 90px !important;*/
     height: 90px;
     background: #C5C5C5;
 }
