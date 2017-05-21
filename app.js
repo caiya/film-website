@@ -14,6 +14,7 @@ const shows = require('./routes/shows');
 const copyright = require('./routes/copyright');
 const creators = require('./routes/creators');
 const developers = require('./routes/developers');
+const history = require('./routes/history');
 
 // error handler
 onerror(app);
@@ -48,5 +49,6 @@ app.use(shows.routes(), shows.allowedMethods());
 app.use(copyright.routes(), copyright.allowedMethods());
 app.use(creators.routes(), creators.allowedMethods());
 app.use(developers.routes(), developers.allowedMethods());
+app.use(history.routes(), history.allowedMethods());
 
 module.exports = app;
